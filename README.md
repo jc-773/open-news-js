@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+The app walks the user through three small steps: 1. Enter email → the backend sends a one-time passcode (OTP) 2. Enter OTP → verify the email belongs to the user 3. Choose topics + news sources → subscribe to the daily newsletter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It connects to my Spring Boot backend through a couple of simple APIs. Nothing fancy yet, just clean HTTP calls and some basic user flow logic.
 
-Currently, two official plugins are available:
+The biggest thing I learned came from the newsletter itself:
+There was an article explaining how large frontend projects use TypeScript’s static typing to prevent bugs before the code ever runs. I didn’t realize how powerful that could be until I started building this.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For example:
+• when I passed props between components
+• when I stored the user’s email in local storage
+• when I built the payload for the subscription request
 
-## React Compiler
+Every file in this project taught me something new:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Components
 
-## Expanding the ESLint configuration
+Learning how React components work with TypeScript helped me understand how to structure interfaces and props. It’s similar to Java in a way — types describe what a function expects.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Routing
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+I learned how multi-page apps use React Router to move between screens. This made the UI much cleaner than the Streamlit version.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+API Types
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Calling my backend and defining types for the responses showed me how TypeScript eliminates “guessing” when dealing with data.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Static Typing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+By far the biggest lesson:
+Static typing saves you from yourself.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+There’s a lot of room to grow:
+• Adding full form validation
+• Creating a cleaner TypeScript type system for subscriptions
+• Improving UI (Tailwind, Material UI, etc.)
+• Adding global state using Context or Zustand
+• Integrating real news previews in the UI
+• Fully replacing Streamlit with React controllers
+
+Running the proj
+• npm install
+• npm run dev
+VITE_API_BASE=

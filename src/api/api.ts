@@ -4,6 +4,7 @@ export async function generateOtp(email: string) {
   return fetch(`${API_BASE}/auth/generate/otp?email=${email}`);
 }
 
+//You down with OTP?
 export async function verifyOtp(email: string, otp: string) {
   return fetch(`${API_BASE}/auth/verify/otp?email=${email}&otp=${otp}`);
 }
