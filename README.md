@@ -1,10 +1,10 @@
-#Open-News-Js Frontend
-##What it does
+# Open-News-Js Frontend
+## What it does
 The app walks the user through three small steps: 1. Enter email → the backend sends a one-time passcode (OTP) 2. Enter OTP → verify the email belongs to the user 3. Choose topics + news sources → subscribe to the daily newsletter
 
 It connects to my Spring Boot backend through a couple of simple APIs. Nothing fancy yet, just clean HTTP calls and some basic user flow logic.
 
-##The biggest thing I learned came from the newsletter itself:
+## The biggest thing I learned came from the newsletter itself:
 There was an article explaining how large frontend projects use TypeScript’s static typing to prevent bugs before the code ever runs. I didn’t realize how powerful that could be until I started building this.
 
 For example:
@@ -26,10 +26,10 @@ Calling my backend and defining types for the responses showed me how TypeScript
 Static Typing
 This was the most important lesson. Static typing prevents common mistakes before the application ever runs. It became clear how much this improves reliability, especially as a project grows.
 
-##By far the biggest lesson:
+## By far the biggest lesson:
 Static typing saves you from yourself.
 
-##There’s a lot of room to grow:
+## There’s a lot of room to grow:
 • Adding full form validation
 • Creating a cleaner TypeScript type system for subscriptions
 • Improving UI (Tailwind, Material UI, etc.)
@@ -37,7 +37,7 @@ Static typing saves you from yourself.
 • Integrating real news previews in the UI
 • Fully replacing Streamlit with React controllers
 
-##Running the proj
+## Running the proj
 • npm install
 • npm run dev
   VITE_API_BASE=
