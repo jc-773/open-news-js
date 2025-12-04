@@ -8,9 +8,9 @@ It connects to my Spring Boot backend through a couple of simple APIs. Nothing f
 There was an article explaining how large frontend projects use TypeScript’s static typing to prevent bugs before the code ever runs. I didn’t realize how powerful that could be until I started building this.
 
 For example:
-• when I passed props between components
-• when I stored the user’s email in local storage
-• when I built the payload for the subscription request
+ - when I passed props between components
+ - when I stored the user’s email in local storage
+ - when I built the payload for the subscription request
 
 Every file in this project taught me something new:
 
