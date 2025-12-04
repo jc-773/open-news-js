@@ -14,7 +14,7 @@ For example:
 
 ### Every file in this project taught me something new:
 #### Components
-Learning how React components work with TypeScript helped me understand how to structure interfaces and props. It’s similar to Java in a way — types describe what a function expects.
+Learning how React components work with TypeScript helped me understand how to structure interfaces and props. It’s similar to Java in a way how types describe what a function expects.
 
 #### Routing
 I learned how multi-page apps use React Router to move between screens. This made the UI much cleaner than the Streamlit version.
